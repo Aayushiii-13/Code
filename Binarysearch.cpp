@@ -1,7 +1,7 @@
 #include<iostream>
-#include<algorithm>
-#include<cstdlib>
-#include<ctime>
+#include<algorithm> //Provides functions for common data manipulation tasks.
+#include<cstdlib> //General-purpose utilities like random numbers.
+#include<ctime> //Utilities for working with time, often paired with cstdlib.
 using namespace std;
 
 void generaterandom(int arr[] , int SIZE){
@@ -14,7 +14,7 @@ void generaterandom(int arr[] , int SIZE){
 
 int binarysearch(int arr[] , int left, int right , int key){
     while(left <= right){
-        int mid  = left + (right - left)/2 ;
+        int mid  = left + (right - left)/2 ; //to avoid overflow
         if(arr[mid] == key ){
             return mid ;
         }
