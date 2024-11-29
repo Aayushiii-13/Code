@@ -2,10 +2,10 @@ def is_safe(board, row, col, n):
     for i in range(row):
         if board[i][col] == 1:
             return False
-    for i, j in zip(range(row-1, -1, -1), range(col-1, -1, -1)):
+    for i, j in zip(range(row-1, -1, -1), range(col-1, -1, -1)): #left diagonal
         if board[i][j] == 1:
             return False
-    for i, j in zip(range(row-1, -1, -1), range(col+1, n)):
+    for i, j in zip(range(row-1, -1, -1), range(col+1, n)): #right diagonal
         if board[i][j] == 1:
             return False
 
@@ -18,7 +18,7 @@ def solve_nqueen(board, row, n):
         print()
         return True
     
-    res = False
+    res = False #recursive case
     for col in range(n):
         if is_safe(board, row, col, n):
             board[row][col] = 1  
