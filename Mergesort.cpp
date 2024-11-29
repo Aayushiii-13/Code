@@ -1,7 +1,8 @@
 #include<iostream>
-#include<cstdlib>
-#include<ctime>
-#include<chrono>
+#include<algorithm> //Provides functions for common data manipulation tasks.
+#include<cstdlib> //General-purpose utilities like random numbers.
+#include<ctime> //Utilities for working with time, often paired with cstdlib.
+#include<chrono> //measuring Exceution time 
 using namespace std;
 using namespace chrono;
 
